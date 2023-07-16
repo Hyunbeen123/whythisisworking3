@@ -29,19 +29,19 @@ const db = getFirestore(app);
 // }
 
 
-document.getElementById('btn').onclick = function () { 
+document.getElementById('btn').onclick = async function () {
   const coordinate = JSON.parse(localStorage.getItem('coordinate'));
   const lat = coordinate.lat;
   const lng = coordinate.lng;
   try {
-    const docRef = addDoc(collection(db, "pinName"), {
+    const docRef = await addDoc(collection(db, "pinName"), {
       name: pinName.value,
       lat: lat,
       lng: lng
     });
-  } 
+  }
   catch (e) {
     console.error("Error adding document: ", e);
   }
-  // window.close();
+  window.close();
 }
