@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>분실물 정보</title>
+        <link rel="stylesheet" type="text/css" href="popup.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        </style>
+        <script type="module" src="popup.js"></script>
+    </head>
+
+    <body>
+        <div>   
+            <form onsubmit="return false;">
+                <input id='pinName' onkeyup="readData()">
+                <button id='btn'>게시</button>
+            </form>
+            <script>
+            function readData() {
+              const pinName = document.getElementById('pinName');
+              console.log("succcessfully read data:", pinName.value);
+            }
+            // document.getElementById("pinName").onkeyup = function () {
+            //     const writefuck = document.getElementById("pinName"); //쓰다 시발
+            //     console.log("successfully read data:", writefuck.value)
+            // }
+            // document.getElementById("btn").addEventListener('click', pinName);
+            // function pinName() {
+            //     try {
+            //         const docRef = addDoc(collection(db, "pinName"), {
+            //         name: pinName
+            //         });
+            //         console.log("Document written with ID: ", docRef.id);
+            //         } catch (e) {
+            //         console.error("Error adding document: ", e);
+            //         }
+            // }
+
+//             function fuck() {
+//                 const pinName = document.getElementById('pinName');
+//                 console.log("succcessfully read data:", pinName.value);
+//             }
+//             document.getElementById('btn').onclick = function () {  
+//                 try {
+//     const docRef = addDoc(collection(db, "pinName"), {
+//       name: pinName.value 
+//     });
+//     console.log("PIN name written with ID: ", docRef.id);
+//     console.log("->", pinName.value);
+//     console.log("TYPE:", typeof pinName)
+//   } 
+//   catch (e) {
+//     console.error("Error adding document: ", e);
+//   }
+// }
+            </script>
+        </div> 
+        
+    </body>
+</html>

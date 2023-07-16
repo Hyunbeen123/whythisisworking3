@@ -24,5 +24,8 @@
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
     "serve": "^11.3.2"
+  },
+  "dependencies": {
+    "firebase": "^10.0.0"
   }
 }
